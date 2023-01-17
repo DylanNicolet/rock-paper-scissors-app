@@ -54,9 +54,6 @@ export default function App() {
       setVerdict("YOU LOSE")
     }
 
-    /* Used for updating score display */
-    setTimesPlayed(timesPlayed + 1)
-
     /* Sets delays for updating the DOM to next game stages */
     setTimeout(() => {
       setGameStage(2)
@@ -66,6 +63,7 @@ export default function App() {
     }, 1300)
     setTimeout(() => {
       setGameStage(4)
+      setTimesPlayed(timesPlayed + 1)
     }, 2000)
   }
 
