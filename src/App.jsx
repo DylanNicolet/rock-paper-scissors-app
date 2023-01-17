@@ -58,13 +58,13 @@ export default function App() {
     /* Sets delays for updating the DOM to next game stages */
     setTimeout(() => {
       setGameStage(2)
-    }, 400)
+    }, 500)
     setTimeout(() => {
       setGameStage(3)
-    }, 800)
+    }, 1300)
     setTimeout(() => {
       setGameStage(4)
-    }, 1200)
+    }, 2000)
   }
 
   /* Defines icons and styling for player & computer choices */
