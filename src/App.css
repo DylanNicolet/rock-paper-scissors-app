@@ -91,7 +91,7 @@ body{
   height: 140px;
   border-radius: 50%;
   border: 18px solid hsl(349, 71%, 52%);
-  margin: 35px 80px;
+  margin: 35px auto;
 }
 
 .rules-button button{
