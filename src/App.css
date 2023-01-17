@@ -1,38 +1,214 @@
-.App {
+body{
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  min-height: 100vh;
+}
+
+.app{
+  height: 85vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-container{
+  border: 2px solid rgba(255, 255, 255, 0.76);
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.score-container__title{
+  font-weight: 700;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.score-container__display{
+  background-color: white;
+  
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-container__display p{
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: grey;
+}
+
+.score-container__display h2{
+  margin: 0;
+  font-size: 2.7rem;
+  color: rgb(110, 110, 110);
+}
+
+/*--Game container--*/
+.game-container{
+  width: 100%;
+}
+
+/*--Stage 1--*/
+.stage1{
+  background: url("/src/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stage1__paper-button{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 18px solid hsl(230, 89%, 62%);
+}
+
+.stage1__scissors-button{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 18px solid hsl(39, 89%, 49%);
+}
+
+.stage1__rock-button{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 18px solid hsl(349, 71%, 52%);
+  margin: 35px 80px;
+}
+
+.rules-button button{
+  width: 120px;
+  height: 45px;
+  border-radius: 7px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+
+}
+
+/*--Stage 2--*/
+.stage2{
+  width: 100%;
+  display: flex;
+  transform: translateY(-30px);
+  justify-content: space-around;
+  font-weight: 700;
+}
+
+.stage2__player-container{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stage2__player-container button{
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stage2__computer-container{
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stage2__computer-choice{
+  width: 120px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.124);
+  border-radius: 100px;
+}
+
+/*--Stage 3--*/
+.stage3{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transform: translateY(-30px);
+  justify-content: space-around;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+.stage3__computer-container button{
+  width: 120px;
+  height: 120px;
+  background-color:white;
+  border-radius: 100px;
+  cursor: default;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stage3__player-container button{
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  cursor: default;
+}
+
+.stage3__player-container{
+  text-align: center;
+}
+
+/*--Stage 4--*/
+.stage4{
+  width: 100%;
+  display: flex;
+  transform: translateY(-30px);
+  justify-content: space-around;
+  font-weight: 700;
+}
+
+.stage4__computer-container button{
+  width: 120px;
+  height: 120px;
+  background-color:white;
+  border-radius: 100px;
+  cursor: default;
+}
+
+.stage4__player-container button{
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  cursor: default;
+}
+
+.verdict{
+  width: 100%;
+  text-align: center;
+}
+
+.verdict h1{
+  font-size: 4rem;
+  margin: 0 auto;
+}
+
+.verdict button{
+  width: 70%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(92, 92, 92);
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
