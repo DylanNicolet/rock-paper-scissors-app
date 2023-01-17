@@ -3,6 +3,7 @@ import React from 'react';
 import paperIcon from "../src/images/icon-paper.svg"
 import scissorsIcon from "../src/images/icon-scissors.svg"
 import rockIcon from "../src/images/icon-rock.svg"
+import rules from "../src/images/image-rules.svg"
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
   const [gameStage, setGameStage] = React.useState(1)
   const [verdict, setVerdict] = React.useState("")
   const [timesPlayed, setTimesPlayed] = React.useState(0)
+  const [modal, setModal] = React.useState(false)
 
   /* Update score in localStorage and App state when timesPlayed changes */
   React.useEffect(() => {
@@ -75,7 +77,6 @@ export default function App() {
   let computerChoiceImageSrc = (computerChoice === "rock"? rockIcon : undefined) || (computerChoice === "paper"? paperIcon : undefined) || (computerChoice === "scissors"? scissorsIcon : undefined)
   let computerChoiceBorderColor = (computerChoice === "rock"? "hsl(349, 71%, 52%)" : undefined) || (computerChoice === "paper"? "hsl(230, 89%, 62%)" : undefined) || (computerChoice === "scissors"? "hsl(39, 89%, 49%)" : undefined)
   let computerChoiceStyle = {border: `18px solid ${computerChoiceBorderColor}`}
-
 
   return (
     <section className='app'>
@@ -151,8 +152,16 @@ export default function App() {
         </section>
       
       <section className="rules-button">
-        <button>RULES</button>
+        <button onClick={e => setModal(true)}>RULES</button>
       </section>
+
+      {modal &&
+        <section className='rules__modal'>
+          <h1 className='rules__title'>RULES</h1>
+          <img src={rules} alt='Rules of the game' className='rules__image'/>
+          <button className='rules__close-button' onClick={e => setModal(false)}>X</button>
+        </section>
+      }
     </section>
   );
 }
