@@ -4,6 +4,9 @@ body{
   color: white;
   font-family: 'Barlow Semi Condensed', sans-serif;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app{
@@ -13,6 +16,7 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  max-width: 375px;
 }
 
 .score-container{
